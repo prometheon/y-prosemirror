@@ -18,7 +18,8 @@
     "watch": "rollup -wc",
     "debug": "concurrently 'http-server -o test.html' 'npm run watch'",
     "preversion": "npm run lint && npm run dist && npm run test",
-    "start": "concurrently 'http-server -o demo/prosemirror.html' 'npm run watch'"
+    "start": "concurrently 'http-server -o demo/prosemirror.html' 'npm run watch'",
+    "prepare": "yarn dist"
   },
   "exports": {
     ".": {
@@ -79,6 +80,5 @@
     "y-protocols": "^1.0.5",
     "y-webrtc": "^10.2.0",
     "yjs": "^13.5.32"
-  },
-  "prepare": "yarn dist"
+  }
 }

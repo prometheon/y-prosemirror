@@ -139,6 +139,7 @@ export const ySyncPlugin = (yXmlFragment, { colors = defaultColors, colorMapping
       }
       // Make sure this is called in a separate context
       rerenderTimeoutId = eventloop.timeout(0, () => {
+        if (binding.isDestroyed) return;
         binding._forceRerender()
         view.dispatch(view.state.tr.setMeta(ySyncPluginKey, { binding }))
       })

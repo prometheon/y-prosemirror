@@ -80,5 +80,5 @@
     "y-webrtc": "^10.2.0",
     "yjs": "^13.5.32"
   },
-  "postinstall": "yarn dist"
+  "prepack": "yarn dist"
 }
